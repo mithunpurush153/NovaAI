@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Survey - Nova AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="voice-page survey-voice-page">
+
+        <!-- Header -->
+        <div class="voice-header">
+
+            <button class="back-btn" onclick="window.location.href='/survey'">
+                ← Back
+            </button>
+
+            <div class="voice-logo survey-voice-logo">
+                🌾 Nova AI — Farmer Survey
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="voice-main" id="voice-main">
+
+            <div class="survey-voice-eyebrow">Voice Survey</div>
+
+            <div class="survey-progress survey-voice-progress" id="survey-progress-wrap" style="display:none;">
+                <div class="survey-progress-bar" id="survey-progress-bar"></div>
+            </div>
+
+            <div class="survey-step-label" id="survey-step-label" style="display:none;"></div>
+
+            <!-- Current question, shown big above the orb -->
+            <h2 class="survey-voice-question" id="survey-voice-question" style="display:none;"></h2>
+
+            <div id="voice-status">
+                Ready to Start
+            </div>
+
+            <!-- Voice Animation -->
+            <div id="voice-orb">
+
+                <div class="voice-circle" id="voice-circle"></div>
+
+                <div class="survey-voice-mic-icon">🎙️</div>
+
+            </div>
+
+            <button id="voiceBtn">
+                Start Voice Survey
+            </button>
+
+        </div>
+
+        <!-- Conversation -->
+        <div class="voice-chat survey-voice-chat" id="voice-chat">
+
+            <h3>Your Answers So Far</h3>
+
+            <div id="conversation">
+
+            </div>
+
+        </div>
+
+        <!-- Completion -->
+        <div class="survey-card survey-voice-complete-card" id="complete-card" style="display:none;">
+
+            <div class="survey-check">🌾</div>
+
+            <h2 class="survey-question">Survey Completed</h2>
+
+            <p class="survey-step-label" style="text-transform:none; letter-spacing:normal;">
+                Thank you for participating — your responses have been saved.
+            </p>
+
+            <button class="survey-next-btn survey-voice-done-btn" onclick="window.location.href='/'">
+                Done
+            </button>
+
+            <button class="survey-next-btn survey-voice-done-btn" onclick="window.location.href='/survey/results'" style="margin-top:10px; background:transparent; border:1px solid var(--border-strong); box-shadow:none;">
+                View Survey Results
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="/static/survey_voice.js"></script>
+
+</body>
+
+</html>

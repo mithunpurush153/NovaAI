@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="icon" href="/static/favicon.png">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <div class="sidebar-top">
+
+                <a href="/" class="sidebar-logo">
+                    ✨ Nova AI
+                </a>
+
+                <button id="new-chat">
+                    + New Chat
+                </button>
+
+                 <a href="/survey" id="survey-link" style="
+                       display:block;
+                       text-align:center;
+                       margin-top:12px;
+                       padding:12px;
+                       border-radius:12px;
+                       border:1px solid var(--border-strong);
+                       color:var(--text-primary);
+                       text-decoration:none;
+                       font-size:14px;
+                       font-weight:600;
+                       transition:.25s var(--ease);
+                 ">
+                        Survey
+                 </a>
+
+                 <a href="/survey/results" id="survey-results-link" style="
+                       display:block;
+                       text-align:center;
+                       margin-top:10px;
+                       padding:12px;
+                       border-radius:12px;
+                       border:1px solid var(--border-strong);
+                       color:var(--text-primary);
+                       text-decoration:none;
+                       font-size:14px;
+                       font-weight:600;
+                       transition:.25s var(--ease);
+                 ">
+                        Survey Results
+                 </a>
+
+            </div>
+
+            <div id="conversation-list">
+
+            </div>
+
+        </div>
+
+        <div class="chat-container">
+
+            <div class="header">
+
+                <div class="header-title">
+                    🟢 Qwen - 2.5
+                </div>
+
+                <a href="/logout" class="status">
+                    Logout
+                </a>
+
+            </div>
+
+            <div id="chat-box">
+
+                <div class="welcome">
+
+                    <div class="ai-message">
+
+                        ✨ Hello! I am <strong>Nova AI</strong>
+
+                        <br><br>
+
+                        How can I help you today?
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="input-container">
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        id="prompt"
+                        placeholder="Message Nova AI..."
+                        autocomplete="off">
+
+                    <button
+                        id="mic-btn"
+                        type="button"
+                        title="Voice Input">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+                            <path d="M5 10a7 7 0 0 0 14 0"></path>
+                            <line x1="12" y1="19" x2="12" y2="22"></line>
+                            <line x1="8" y1="22" x2="16" y2="22"></line>
+
+                        </svg>
+
+                    </button>
+
+                    <button
+                         id="voice-btn"
+                         title="Voice Conversation"
+                         onclick="window.location.href='/voice'">
+                         <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                             <!-- Headset -->
+                             <path d="M4 12a8 8 0 0 1 16 0"></path>
+                             <path d="M4 12v5a2 2 0 0 0 2 2h2v-6H6"></path>
+                             <path d="M20 12v5a2 2 0 0 1-2 2h-2v-6h2"></path>
+                        </svg>
+                    </button>
+
+                    <button
+                        id="send-btn"
+                        onclick="generateText()"
+                        title="Send">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="22"
+                             height="22"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

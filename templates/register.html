@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Register - Nova AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <h2>
+        <a href="/login" class="logo">
+            ✨ Nova AI
+        </a>
+    </h2>
+
+</div>
+
+<div class="login-box">
+
+    <h2>Create Account</h2>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username"
+    >
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+    >
+
+    <button onclick="register()">
+
+        Register
+
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+async function register(){
+
+    const username=document.getElementById("username").value;
+
+    const password=document.getElementById("password").value;
+
+    const response=await fetch("/register",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+            username:username,
+
+            password:password
+
+        })
+
+    });
+
+    const data=await response.json();
+
+    document.getElementById("result").innerHTML=data.message;
+
+}
+
+</script>
+
+</body>
+
+</html>

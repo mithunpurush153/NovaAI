@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results - Nova AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="voice-page survey-voice-page">
+
+        <div class="voice-header">
+
+            <button class="back-btn" onclick="window.location.href='/'">
+                ← Back
+            </button>
+
+            <div class="voice-logo survey-voice-logo">
+                🌾 Nova AI — Farmer Survey Results
+            </div>
+
+        </div>
+
+        <div class="results-stage">
+
+            <div id="results-loading" class="results-loading">
+                Loading responses...
+            </div>
+
+            <div id="results-empty" class="results-empty" style="display:none;">
+                No survey responses yet.
+            </div>
+
+            <table id="results-table" class="results-table" style="display:none;">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Village</th>
+                        <th>Crop</th>
+                        <th>Acres</th>
+                        <th>Experience</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="results-tbody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="/static/survey_results.js"></script>
+
+</body>
+
+</html>

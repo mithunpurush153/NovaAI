@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# AI Models
+Qwen2.5-0.5B-Instruct/
+SmolLM2-360M-Instruct/
+whisper-large-v3-turbo/
+whisper-large-v3-turbo-hf/
+whisper small en/
+faster-whisper-base/
+piper_models/
+
+# Database
+*.db
+
+# Logs
+*.log
+build.log
+
+# Audio
+*.wav
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Voice</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="voice-page">
+
+        <!-- Header -->
+        <div class="voice-header">
+
+            <button class="back-btn" onclick="window.location.href='/'">
+                ← Back
+            </button>
+
+            <div class="voice-logo">
+                ✨ Nova AI
+
+            </div>
+
+        </div>
+
+        <!-- Main -->
+        <div class="voice-main">
+
+            <h1>Voice Conversation</h1>
+
+            <div id="voice-status">
+                Ready to Start
+            </div>
+
+            <!-- Voice Animation -->
+            <div id="voice-orb">
+
+                <div class="voice-circle"></div>
+
+            </div>
+
+            <button id="voiceBtn">
+                🎤 Start Conversation
+            </button>
+
+        </div>
+
+        <!-- Conversation -->
+        <div class="voice-chat">
+
+            <h3>Conversation</h3>
+
+            <div id="conversation">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/voice.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Details - Nova AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="voice-page survey-voice-page">
+
+        <div class="voice-header">
+
+            <button class="back-btn" onclick="window.location.href='/survey/results'">
+                ← Back to Results
+            </button>
+
+            <div class="voice-logo survey-voice-logo">
+                🌾 Farmer Details
+            </div>
+
+        </div>
+
+        <div class="results-stage">
+
+            <div id="detail-loading" class="results-loading">
+                Loading farmer details...
+            </div>
+
+            <div id="detail-error" class="results-empty" style="display:none;">
+                No survey found for this mobile number.
+            </div>
+
+            <div id="detail-content" class="detail-grid" style="display:none;">
+
+                <div class="survey-card detail-card">
+
+                    <div class="detail-card-header">
+                        <div class="survey-step-label">Farmer Details</div>
+                        <div class="detail-actions">
+                            <button id="edit-btn" class="detail-action-btn">✏️ Edit</button>
+                            <button id="save-btn" class="detail-action-btn save-btn" style="display:none;">💾 Save</button>
+                            <button id="cancel-btn" class="detail-action-btn" style="display:none;">Cancel</button>
+                            <button id="delete-btn" class="detail-action-btn danger-btn">🗑️ Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="detail-field">
+                        <span class="detail-label">Mobile Number</span>
+                        <span class="detail-value" id="detail-mobile"></span>
+                    </div>
+
+                    <div class="detail-field">
+                        <span class="detail-label">Name</span>
+                        <span class="detail-value" id="detail-name"></span>
+                    </div>
+
+                    <div class="detail-field">
+                        <span class="detail-label">Village</span>
+                        <span class="detail-value" id="detail-village"></span>
+                    </div>
+
+                    <div class="detail-field">
+                        <span class="detail-label">Crop</span>
+                        <span class="detail-value" id="detail-crop"></span>
+                    </div>
+
+                    <div class="detail-field">
+                        <span class="detail-label">Land Owned</span>
+                        <span class="detail-value" id="detail-acres"></span>
+                    </div>
+
+                    <div class="detail-field">
+                        <span class="detail-label">Farming Experience</span>
+                        <span class="detail-value" id="detail-experience"></span>
+                    </div>
+
+                </div>
+
+                <div class="survey-card detail-card">
+
+                    <div class="survey-step-label">Validation Report</div>
+
+                    <div id="detail-issues" class="detail-issues">
+                    </div>
+
+                    <div class="overall-status">
+                        <span class="detail-label">Overall Status</span>
+                        <span id="detail-overall" class="status-pill"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/survey_result_detail.js"></script>
+
+</body>
+
+</html>

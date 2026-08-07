@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Survey - Nova AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="voice-page">
+
+        <div class="voice-header">
+
+            <button class="back-btn" onclick="window.location.href='/'">
+                ← Back
+            </button>
+
+            <div class="voice-logo">
+                ✨ Nova AI — Farmer Survey
+            </div>
+
+        </div>
+
+        <div class="survey-stage">
+
+            <!-- Mobile number entry -->
+            <div class="survey-card" id="mobile-card">
+
+                <div class="survey-step-label">Let's get started</div>
+
+                <h2 class="survey-question">What is your mobile number?</h2>
+
+                <input
+                    type="tel"
+                    id="mobile-input"
+                    class="survey-answer-input"
+                    placeholder="e.g. 9876543210"
+                    autocomplete="off">
+
+                <p id="mobile-error" class="survey-error"></p>
+
+                <button class="survey-next-btn" onclick="startSurvey()">
+                    Start Voice Survey →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/survey.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Git
+.git/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# AI Models
+Qwen2.5-0.5B-Instruct
+Qwen2.5-0.5B-Instruct/
+
+whisper-large-v3-turbo
+whisper-large-v3-turbo/
+
+whisper-large-v3-turbo-hf
+whisper-large-v3-turbo-hf/
+
+# Database
+postgres_data
+postgres_data/

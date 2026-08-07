@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: nova_ai_app
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+      - C:/textgen/SmolLM2-360M-Instruct:/models/SmolLM2-360M-Instruct:ro
+      - C:/textgen/faster-whisper-base:/models/faster-whisper-base:ro
+    depends_on:
+      - postgres
+
+    environment:
+      DB_HOST: postgres
+      DB_NAME: nova_ai
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_PORT: 5432
+      SARVAM_API_KEY: sk_cvnsraeb_aFCjZBQmHRjfuY37m2rxo8Xe
+
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+
+  postgres:
+    image: postgres:17
+    container_name: nova_ai_postgres
+
+    restart: always
+
+    environment:
+      POSTGRES_DB: nova_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
